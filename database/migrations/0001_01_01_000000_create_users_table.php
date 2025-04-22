@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['user', 'moderator', 'admin'])->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -25,6 +26,16 @@ return new class extends Migration
             $table->string('email')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
+        }); 
+
+        Schema::create('worklogs', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->date('date');
+            $table->decimal('hours', 5, 2);
+            $table->text('comment')->nullable();
+            $table->foreignId('created_by')->constrained('users')->onDelete('cascade');
+            $table->timestamps();
         });
 
         Schema::create('sessions', function (Blueprint $table) {

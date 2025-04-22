@@ -12,7 +12,26 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['"Instrument Sans"', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+
+                'welcome': {
+                    'bg-light': '#FDFDFC',
+                    'bg-dark': '#0a0a0a',
+                    'text-light': '#1b1b18',
+                    'text-dark': '#EDEDEC',
+                    'text-secondary-light': '#706f6c', 
+                    'text-secondary-dark': '#A1A09A',  
+                    'accent-light': '#F53003',       
+                    'accent-dark': '#FF4433',        
+                    'border-light': '#e3e3e0',       
+                    'border-dark': '#3E3E3A',        
+                    'button-bg-light': '#1b1b18',    
+                    'button-text-light': '#ffffff',  
+                    'button-bg-dark': '#eeeeec',     
+                    'button-text-dark': '#1C1C1A',   
+                }
             },
         },
     },
