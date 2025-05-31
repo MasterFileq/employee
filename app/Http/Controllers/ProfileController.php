@@ -18,9 +18,6 @@ class ProfileController extends Controller
         return view('auth.profile.edit', ['user' => Auth::user()]);
     }
 
-    /**
-     * Zaktualizuj dane profilu użytkownika.
-     */
     public function update(Request $request)
     {
         $user = Auth::user();

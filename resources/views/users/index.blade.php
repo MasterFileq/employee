@@ -10,14 +10,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <!-- Przycisk dodawania użytkownika -->
                     <div class="mb-6">
                         <a href="{{ route('admin.users.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition">
                             Dodaj Użytkownika
                         </a>
                     </div>
 
-                    <!-- Formularz wyszukiwania -->
                     <div class="mb-6">
                         <form method="GET" action="{{ route('admin.users.index') }}">
                             <input type="text" name="search" value="{{ request('search') }}" placeholder="Szukaj po imieniu lub emailu" class="rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100">
@@ -25,7 +23,6 @@
                         </form>
                     </div>
 
-                    <!-- Powiadomienie o sukcesie -->
                     @if (session('success'))
                         <div class="mb-6 p-4 bg-green-100 text-green-700 rounded-md">
                             {{ session('success') }}
@@ -67,7 +64,6 @@
                         </table>
                     </div>
 
-                    <!-- Paginacja -->
                     <div class="mt-6">
                         {{ $users->links() }}
                     </div>

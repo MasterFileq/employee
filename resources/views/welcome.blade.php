@@ -9,7 +9,6 @@
 </head>
 <body class="antialiased bg-gray-100 dark:bg-gray-900">
     <div class="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-        <!-- Główna sekcja powitalna -->
         <div class="max-w-3xl w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 text-center">
             <div class="flex justify-center mb-6">
                 <svg class="h-12 w-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,7 +22,6 @@
                 Zarządzaj godzinami pracy, przeglądaj historię i kontroluj dane pracowników w prosty i nowoczesny sposób.
             </p>
 
-            <!-- Przyciski akcji -->
             <div class="flex justify-center space-x-4">
                 @if (Route::has('login'))
                     <a href="{{ route('login') }}" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition">
@@ -37,7 +35,6 @@
                 @endif
             </div>
 
-            <!-- Informacja dla zalogowanych użytkowników -->
             @auth
                 <div class="mt-8">
                     <p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -50,9 +47,8 @@
             @endauth
         </div>
 
-        <!-- Stopka -->
         <footer class="mt-12 text-gray-500 dark:text-gray-400 text-sm">
-            &copy; {{ date('Y') }} {{ config('app.name', 'Rejestr Pracowników') }}. Wszystkie prawa zastrzeżone.
+            &copy; 2025 Łukasz Szczygielski, Grzegorz Sosna, Wiktor Pawłowski. Wszystkie prawa zastrzeżone.
         </footer>
     </div>
 </body>
